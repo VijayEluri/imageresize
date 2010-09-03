@@ -1,5 +1,15 @@
 Simple image resizer in java using Java2D API
 
 USAGE:
-Sorry have to check the code ;)
+java -jar imageresize.jar [-sr] [--size=size] [--email_to=email] [--email_from=email] [--smtp=smtp.address]
+                          [--smtp_user=smtp.username] [--smtp_pass=smtp.password]
+                          [--resize=true|false] [--send=true|false]
+                          [--subject=subject] filename...
+
+--options are stored to user preference file and reused when not specified
+parameters
+-r sets resizing on for the current session
+-s sets sending on for the current session
+
+Multiple .jpg or .JPG filenames are accepted 
 
