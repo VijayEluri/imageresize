@@ -111,14 +111,14 @@ public class Settings {
 	}
 
 	/**
-	 * @param resizeing the resizeing to set
+	 * @param resizeing the resizing to set
 	 */
 	public void setResizeing(boolean resizeing) {
 		this.resizeing = resizeing;
 	}
 
 	/**
-	 * @return the resizeing
+	 * @return the resizing
 	 */
 	public boolean isResizeing() {
 		return resizeing;
