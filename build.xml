@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project imageresize with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/home/spike/imageresize.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="hu.bikeonet.resize.Main"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ dsn.jar imap.jar mailapi.jar pop3.jar smtp.jar mail.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="/home/spike/workspace/java/imageresize/bin"/>
+            <zipfileset dir="/home/spike/workspace/java/imageresize/lib/javamail-1.4.3/lib" includes="dsn.jar"/>
+            <zipfileset dir="/home/spike/workspace/java/imageresize/lib/javamail-1.4.3/lib" includes="imap.jar"/>
+            <zipfileset dir="/home/spike/workspace/java/imageresize/lib/javamail-1.4.3/lib" includes="mailapi.jar"/>
+            <zipfileset dir="/home/spike/workspace/java/imageresize/lib/javamail-1.4.3/lib" includes="pop3.jar"/>
+            <zipfileset dir="/home/spike/workspace/java/imageresize/lib/javamail-1.4.3/lib" includes="smtp.jar"/>
+            <zipfileset dir="/home/spike/workspace/java/imageresize/lib/javamail-1.4.3" includes="mail.jar"/>
+        </jar>
+    </target>
+</project>
